@@ -1,0 +1,119 @@
+@import 'utils/variables/colors';
+@import 'utils/variables/typography';
+@import 'utils/variables/breakpoints';
+
+
+#oscars {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding-top: 20em;
+    margin-bottom: 5em;
+    position: relative;
+
+    &::before {
+        content: url('./assets/images/Sunflower.png');
+        position: absolute;
+        left: 10em;
+        top: 13em;
+        z-index: 1;
+    }
+
+    &::after {
+        content: url('./assets/images/orchid.png');
+        position: absolute;
+        right: -4em;
+        top: 3em;
+    }
+
+    article {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        div {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('./assets/images/background_oscars.png');
+            width: 56%;
+        }
+
+        p {
+            color: $color__background-body;
+            font-size: 3rem;
+            padding: 1.5em 2em 2em 2em;
+            line-height: 52px;
+            letter-spacing: -0.02em;
+            font-family: $font__titles;
+            font-weight: bold;
+            word-break: keep-all;
+            margin: 0;
+            //z-index: -1;
+        }
+
+        img {
+            mix-blend-mode: darken;
+            width: 278px;
+            height: 129px;
+            margin-top: 3em;
+            margin-left: -2em;
+
+
+        }
+    }
+}
+
+
+ // responsive
+@media all and (max-width: $breakpoint__tablet) {
+    #oscars {
+        padding-top: 3em;
+        &::before,
+        &::after {
+            content: '';
+        }
+
+        article div p {
+            font-size: 1.72rem;
+            line-height: 1em;
+            
+            
+
+        }
+    }
+}
+
+@media all and (max-width: $breakpoint__large_phone) {
+
+    #oscars {
+        padding-top: 2em;
+
+        &::before,
+        &::after {
+            content: '';
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            div {
+                width: 80%;
+
+                p {
+                    font-size: 4vw;
+                    line-height: 1em;
+                    padding: 0;
+                    margin:2em;
+                }
+            }
+
+            img {
+                margin-top: -1.5em;
+            }
+        }
+    }
+}

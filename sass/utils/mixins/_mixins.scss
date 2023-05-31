@@ -1,0 +1,124 @@
+// rotation fleurs
+
+@mixin rotation {
+    animation: rotation 15s linear infinite;
+    -webkit-animation: rotation 15s linear infinite;
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+// parallaxe
+
+@mixin parallaxe-fade-in-up {
+    animation: parallaxe-fade-in-up 1s ease-in-out;
+    -webkit-animation: parallaxe-fade-in-up 1s ease-in-out;
+
+    @keyframes parallaxe-fade-in-up {
+        from {
+            //transform: translateY(150px);
+            transform: translate3d(0, 200px, 0);
+            -webkit-transform: translate3d(0, 200px, 0);
+            -moz-transform: translate3d(0, 200px, 0);
+            -ms-transform: translate3d(0, 200px, 0);
+            -o-transform: translate3d(0, 200px, 0);
+            opacity: 0;
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+
+@mixin parallaxe-down {
+    animation: parallaxe-down 1s ease-in-out forwards;
+    -webkit-animation: parallaxe-down 1s ease-in-out forwards;
+
+    @keyframes parallaxe-down {
+        0% {
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -o-transform: translateY(0);
+}
+
+        100% {
+            transform: translateY(20%);
+            -webkit-transform: translateY(20%);
+            -moz-transform: translateY(20%);
+            -ms-transform: translateY(20%);
+            -o-transform: translateY(20%);
+}
+    }
+}
+
+
+// flottement
+
+@mixin floating {
+    animation: floating 5s ease-in-out infinite;
+    -webkit-animation: floating 5s ease-in-out infinite;
+
+    @keyframes floating {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        20% {
+            transform: translateY(10px);
+            -webkit-transform: translateY(10px);
+            -moz-transform: translateY(10px);
+            -ms-transform: translateY(10px);
+            -o-transform: translateY(10px);
+        }
+
+        40% {
+            transform: translateX(10px);
+            -webkit-transform: translateX(10px);
+            -moz-transform: translateX(10px);
+            -ms-transform: translateX(10px);
+            -o-transform: translateX(10px);
+        }
+
+        60% {
+            transform: translateY(-5px);
+            -webkit-transform: translateY(-5px);
+            -moz-transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
+            -o-transform: translateY(-5px);
+}
+
+        80% {
+            transform: translateX(-5px);
+            -webkit-transform: translateX(-5px);
+            -moz-transform: translateX(-5px);
+            -ms-transform: translateX(-5px);
+            -o-transform: translateX(-5px);
+}
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+}
+

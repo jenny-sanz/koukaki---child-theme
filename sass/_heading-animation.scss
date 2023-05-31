@@ -1,0 +1,43 @@
+@import 'utils/mixins/mixins';
+
+// classes pour l'animation des titre géré avec JS
+.animate-title{
+    display: inline-block;
+    margin-right: 15px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.2s ease-in, transform 0.5s ease-in;
+    -webkit-transition: opacity 0.2s ease-in, transform 0.5s ease-in;
+    -moz-transition: opacity 0.2s ease-in, transform 0.5s ease-in;
+    -ms-transition: opacity 0.2s ease-in, transform 0.5s ease-in;
+    -o-transition: opacity 0.2s ease-in, transform 0.5s ease-in;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    
+    &.visible
+{
+        opacity:1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+}
+  
+
+@media all and (max-width: 700px) {
+	h2 span{
+		font-size: 2rem;
+        padding: 1em 0em;
+	}
+   #studio h2{
+    padding: 0;
+   }
+   .main-character h3{
+    display: flex;
+    font-size: 2rem;
+   }
+}
