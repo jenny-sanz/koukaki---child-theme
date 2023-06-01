@@ -5,10 +5,10 @@ get_header();
 
 <main id="primary" class="site-main">
     <section class="banner">
-        <video id="background-video" poster=<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?> " autoplay loop muted>
+        <video id="background-video" poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>" autoplay loop muted>
             <source src="wp-content/themes/foce-child/assets/video/Studio-koukaki-video.mp4">
         </video>
-        <img  src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
             alt="logo Fleurs d'oranger & chats errants">
     </section>
     <section id="#story" class="story">

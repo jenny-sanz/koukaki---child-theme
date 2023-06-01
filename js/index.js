@@ -55,18 +55,23 @@ for (let i = 0; i < sections.length; i++) {
 
 // parallaxe banner hero
 
- window.addEventListener('scroll', function () {
-   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-   const body = document.querySelector('body');
+   window.addEventListener('scroll', function () {
+     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+     const body = document.querySelector('body');
   
-   if (scrollPosition > 0) {
-     body.classList.add('scroll-down');
-   } else {
-     body.classList.remove('scroll-down');
-   }
- });
+     if (scrollPosition > 0) {
+       body.classList.add('scroll-down');
+     
+     } else {
+       body.classList.remove('scroll-down');
+       
+  
+     }
+   })
+  
 
 
-
-
+ 
+  
+// parallaxe nuage section Lieu
 
