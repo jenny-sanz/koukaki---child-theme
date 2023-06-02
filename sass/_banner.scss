@@ -1,63 +1,59 @@
 @import 'utils/mixins/mixins';
- .banner {
-     background-image: url("./assets/images/banner.png");
-     min-height: 806px;
-     background-size: cover;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     position: relative;
-     overflow: auto;
 
-
-     &#background-video {
-         width: 100vw;
-         min-height: 806px;
-         object-fit: cover;
-         position: fixed;
-         left: 0;
-         right: 0;
-         top: 0;
-         bottom: 0;
-         z-index: -1;
-     }
-
-    img {
-     margin-top: -10%;
-     width: 50%;
-     position: absolute;
-     z-index: 2;
-             @include floating;
-             transition: transform 0.3s ease-out;
-   
- }
-}
-
- body .banner img{
-     transition: .5s all;
-     -webkit-transition: .5s all;
-     -moz-transition: .5s all;
-     -ms-transition: .5s all;
-     -o-transition: .5s all;
- }
-
-      body.scroll-down .banner img {
-          @include floating;
-          @include parallaxe-down;
-              scroll-behavior: smooth;
-
-    }
-
+.banner {
+    //background-image: url("./assets/images/banner.png");
+    min-height: 806px;
+    //height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   
-    
-    
+    &#background-video {
+      width: 100vw;
+      min-height: 806px;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  
+    .logo-container {
+      position: absolute;
+      z-index: 2;
+      margin-top: -20%;
+  
+      #logo {
+        width: 100%;
+       
+      }
+    }
+  }
+  
 
-    
-      
+                //* responsive
+@media all and (max-width: 900px){
+    .banner {
+        min-height: 600px;
+         .logo-container {
+             margin-top: -50%;
+             display: flex;
+             justify-content:center;
+             align-items:center;
+             
+             #logo{
+                width: 80%;
+              
+             }
+ }
 
-    
-                // responsive
 
+
+}
 @media all and (max-width: 700px) {
 
     #background-video {
@@ -65,14 +61,18 @@
     }
 
      .banner {
-         img {
-             //display: block;
-             width: 80%;
-             animation: none;
-             -webkit-animation: none;
+        min-height: 600px;
+         .logo-container {
+             margin-top: -80%;
+             display: flex;
+             justify-content:center;
+             align-items:center;
+             
+             #logo{
+                width: 80%;
+              
+             }
  }
 }
-    body.scroll-down .banner img {
-        animation: none;
-    }
-}
+    
+}}

@@ -8,13 +8,65 @@
  Version: 0.1
  */
 
-@import 'sass/front-page-animations';
-@import 'sass/heading-animation';
-@import 'sass/banner';
-@import 'sass/swiper-characters';
-@import 'sass/place-animation';
+@import 'sass/animations'; // animation parallaxe
+@import 'sass/heading-animation'; // animation titres sections
+@import 'sass/banner'; // banner hero
 @import 'sass/oscars';
+@import 'sass/footer';
+@import 'sass/swiper';
 @import 'sass/footer';
 
 
 
+//* section personnages
+
+.story #characters {
+display: flex;
+flex-direction: column;
+margin-top: 10em;
+
+
+h3 {
+    width: 60%;
+    font-size: 3rem;
+    padding: 1em 2em;
+}
+
+}
+
+//* responsive
+@media all and (max-width: $breakpoint__tablet){
+    .story #characters {
+        margin-top: 0;
+    
+    h3{
+     width: 100%;
+    
+   }
+}
+#place{
+    #clouds-container{
+    display: none;
+}
+}
+
+}
+@media all and (max-width: $breakpoint__large_phone) {
+    .story #characters {
+        margin-top: 0;
+    
+    h3{
+     width: 100%;
+     font-size: 28px;
+   }
+}
+#place{
+    #clouds-container{
+    display: none;
+}
+h3{
+    font-size: 28px;
+}
+}
+
+}

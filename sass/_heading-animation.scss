@@ -1,6 +1,6 @@
 @import 'utils/mixins/mixins';
 
-// classes pour l'animation des titre géré avec JS
+//* Animation des titre géré avec JS
 .animate-title{
     display: inline-block;
     margin-right: 15px;
@@ -27,7 +27,7 @@
 }
 }
   
-
+//* Rresponsive
 @media all and (max-width: 700px) {
 	h2 span{
 		font-size: 2rem;

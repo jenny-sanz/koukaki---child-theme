@@ -64,7 +64,7 @@
 }
 
 
- // responsive
+ //* responsive
 @media all and (max-width: $breakpoint__tablet) {
     #oscars {
         padding-top: 3em;
@@ -76,9 +76,6 @@
         article div p {
             font-size: 1.72rem;
             line-height: 1em;
-            
-            
-
         }
     }
 }

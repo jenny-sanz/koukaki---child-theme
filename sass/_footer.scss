@@ -42,6 +42,8 @@
     }
   }
 }
+
+//* Responsive
 @media all and (max-width: #{$breakpoint__small_tablet}) {
   .site-footer {
     &::before {

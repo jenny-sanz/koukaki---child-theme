@@ -5,23 +5,25 @@ get_header();
 
 <main id="primary" class="site-main">
     <section class="banner">
-        <video id="background-video" poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>" autoplay loop muted>
-            <source src="wp-content/themes/foce-child/assets/video/Studio-koukaki-video.mp4">
-        </video>
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
-            alt="logo Fleurs d'oranger & chats errants">
+        <video id="background-video" poster=<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?> " autoplay loop muted>
+            <source src=" wp-content/themes/foce-child/assets/video/Studio-koukaki-video.mp4"> 
+        </video> 
+        <div class="logo-container">
+            <img id="logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
+                alt="logo Fleurs d'oranger & chats errants">
+        </div>
     </section>
     <section id="#story" class="story">
         <h2>L'histoire</h2>
-        <article id="" class="story__article">
+        <article class="story__article">
             <p><?php echo get_theme_mod('story'); ?></p>
         </article>
-               <article id="characters">
-                <h3>Les personnages</h3>
+        <article id="characters">
+            <h3>Les personnages</h3>
 
-                <!-- SLIDER PERSONNAGES -->
-                <?php get_template_part('template-parts/swiper'); ?>
-                 
+            <!-- SLIDER PERSONNAGES -->
+            <?php get_template_part('template-parts/swiper'); ?>
+
         </article>
         <article id="place">
             <div>
@@ -47,7 +49,7 @@ get_header();
                 errants”.
             </p>
         </div>
-                <!-- section oscars --> 
+        <!-- section oscars -->
         <?php get_template_part('template-parts/oscars'); ?>
 
     </section>
