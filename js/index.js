@@ -1,4 +1,21 @@
 console.log('test');
+//* NAVIGATION MENU BURGER
+
+const menuBurger = document.querySelector('.menu-burger');
+const nav = document.querySelector('nav');
+
+menuBurger.addEventListener('click', () => {
+    menuBurger.classList.toggle('open');
+    nav.classList.toggle('open');
+    nav.classList.toggle('fade-in-up');
+
+    
+});
+
+nav.addEventListener('click', () => {
+    menuBurger.classList.remove('open');
+    nav.classList.remove('open');
+});
 
 //* ANIMATION FADE-IN SECTIONS ET TITRES 
 
@@ -56,7 +73,7 @@ for (let i = 0; i < sections.length; i++) {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".logo-container", {
-    y: 300,
+    y: 450,
     ease: "none",
     scrollTrigger: {
       trigger: ".banner",
@@ -67,17 +84,18 @@ gsap.to(".logo-container", {
     }, 
   });
   
-// Animation de flottement du logo
+// Animation de flottement du logo 
 function animateFloating() {
     gsap.to('#logo', {
       y: '+=20',
       x: '+=20',
-      duration: 2,
+      duration: 1.5,
       ease: 'sine.inOut',
       yoyo: true,
       repeat: -1
     });
   }  
+
   // Appel de la fonction d'animation de flottement au chargement de la page
   animateFloating();
   
@@ -104,9 +122,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //*  SECTION LIEU 
 
-//*  Modification du dom et ajout conteneur + img pour nuages
+//  Modification du dom et ajout conteneur + img pour nuages
 
-// Sélectionne le conteneur
 const lieu = document.querySelector('#place');
 
 // Ajoute les propriétés CSS: background, position
@@ -158,7 +175,7 @@ function activateScrollTrigger() {
             start: 'top center', // Point de départ de l'animation
             end: 'bottom center', // Point de fin de l'animation
             scrub: true, // Définir à true pour lier le mouvement à la position de défilement
-            markers: true, // Ajouter un marqueur de débogage
+            //markers: true, // Ajouter un marqueur de débogage
             onEnter: () => console.log('Animation triggered'), // Fonction à exécuter lorsque l'animation démarre
         },
     });

@@ -3,12 +3,13 @@
 .banner {
     //background-image: url("./assets/images/banner.png");
     min-height: 806px;
-    //height: 100vh;
+ 
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    top: 75px;
   
     &#background-video {
       width: 100vw;
@@ -25,10 +26,14 @@
     .logo-container {
       position: absolute;
       z-index: 2;
-      margin-top: -20%;
+      margin-top: -30%;
+      display: grid;
+      place-items: center;
+      
   
       #logo {
-        width: 100%;
+        width: 80%;
+       
        
       }
     }

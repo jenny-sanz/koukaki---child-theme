@@ -10,7 +10,7 @@ function add_theme_scripts() {
     //js
     wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/js/index.js', array( 'jquery' ), '1.1', true );
 
-    //swipper js
+    // swipper js
     wp_enqueue_script( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.js', array(), true );
     wp_enqueue_style( 'swiper-css', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.css', array(), );
     wp_enqueue_script( 'my-swiper', get_stylesheet_directory_uri() . '/js/my-swiper.js', array( 'jquery' ), '1.1', true );

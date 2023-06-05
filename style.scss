@@ -15,11 +15,13 @@
 @import 'sass/footer';
 @import 'sass/swiper';
 @import 'sass/footer';
-
+@import 'sass/header';
 
 
 //* section personnages
-
+.story{
+    margin-top: 5.5em;
+}
 .story #characters {
 display: flex;
 flex-direction: column;
