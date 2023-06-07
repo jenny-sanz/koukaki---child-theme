@@ -10,6 +10,7 @@
     padding-top: 20em;
     margin-bottom: 5em;
     position: relative;
+    overflow: hidden;
 
     &::before {
         content: url('./assets/images/Sunflower.png');

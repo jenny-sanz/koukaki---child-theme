@@ -21,6 +21,7 @@
 //* section personnages
 .story{
     margin-top: 5.5em;
+    overflow: hidden;
 }
 .story #characters {
 display: flex;
@@ -34,6 +35,10 @@ h3 {
     padding: 1em 2em;
 }
 
+}
+
+#studio{
+    overflow: hidden;
 }
 
 //* responsive

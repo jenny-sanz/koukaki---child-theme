@@ -43,17 +43,14 @@
                 //* responsive
 @media all and (max-width: 900px){
     .banner {
-        min-height: 600px;
+        min-height: 800px;
          .logo-container {
              margin-top: -50%;
              display: flex;
              justify-content:center;
              align-items:center;
              
-             #logo{
-                width: 80%;
-              
-             }
+            
  }
 
 
@@ -74,7 +71,8 @@
              align-items:center;
              
              #logo{
-                width: 80%;
+              margin-top: -50%;
+               
               
              }
  }
