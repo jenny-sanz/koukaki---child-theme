@@ -13,7 +13,7 @@ const swiper = new Swiper(".mySwiper", {
       slideShadows: true,
     },
 
-    initialSlide: 2,
+    initialSlide: 4,
     spaceBetween: 50,
 
     loop: true,

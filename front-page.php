@@ -21,7 +21,7 @@ get_header();
         <article id="characters">
             <h3>Les personnages</h3>
 
-            <!-- SLIDER PERSONNAGES -->
+            //* SLIDER PERSONNAGE - TEMPLATE PART
             <?php get_template_part('template-parts/swiper'); ?>
 
         </article>
@@ -49,7 +49,8 @@ get_header();
                 errants”.
             </p>
         </div>
-        <!-- section oscars -->
+
+        //* SECTION OSCARS - TEMPLATE PART
         <?php get_template_part('template-parts/oscars'); ?>
 
     </section>

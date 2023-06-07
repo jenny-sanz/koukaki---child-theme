@@ -114,15 +114,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
 });
  
-  // parallaxe logo
 
- 
-
-
-
-//*  SECTION LIEU 
-
-//  Modification du dom et ajout conteneur + img pour nuages
+//*  SECTION LIEU - MODIFICATION DU DOM
 
 const lieu = document.querySelector('#place');
 
@@ -161,7 +154,7 @@ cloudsContainer.appendChild(cloud2);
 lieu.appendChild(cloudsContainer);
 
 
-//* Animation au scroll des nuages avec le plugin scroll trigger de gsap
+//* ANIMATION AU SCROLL DES NUAGES - GSAP ET SCROLLTRIGGER 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -181,7 +174,8 @@ function activateScrollTrigger() {
     });
 }
 
-// Appeler la fonction pour activer ScrollTrigger une fois que la page est complètement chargée
+//* APPELLE DE LA FONCTION ACTIVATESCROLLTRIGGER AU CHARGEMENT DE LA PAGE
+
 window.addEventListener('load', () => {
     activateScrollTrigger();
 
