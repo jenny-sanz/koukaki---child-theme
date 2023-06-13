@@ -8,35 +8,19 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
-/* @mixin float($delay) {
-   animation-name: floating;
-   animation-duration: 3s;
-   animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-   animation-iteration-count: infinite;
-   animation-direction: alternate;
-   animation-delay: $delay;
- }
-
- @keyframes floating {
-   0% {
-     transform: translate(0, 0);
-   }
-   50% {
-     transform: translate(20px, 20px);
-   }
-   100% {
-     transform: translate(0, 0);
-   }
- } */
 @keyframes floating {
-  0% {
-    transform: translate(0, 0) rotate(0);
+  25% {
+    transform: translate(10px, 10px) rotate(10deg);
   }
   50% {
-    transform: translate(20px, 20px) rotate(10deg);
+    transform: translate(-10px, 10px) rotate(-5deg);
   }
-  100% {
-    transform: translate(0, 0) rotate(0);
+  75% {
+    transform: translate(10px, -5px) rotate(10deg);
+    -webkit-transform: translate(10px, -5px) rotate(10deg);
+    -moz-transform: translate(10px, -5px) rotate(10deg);
+    -ms-transform: translate(10px, -5px) rotate(10deg);
+    -o-transform: translate(10px, -5px) rotate(10deg);
   }
 }
 .fade-in-up {
@@ -63,27 +47,6 @@
     visibility: visible;
   }
 }
-.parallax-down {
-  animation: parallaxe-down 1s ease-in-out forwards;
-  -webkit-animation: parallaxe-down 1s ease-in-out forwards;
-}
-@keyframes parallaxe-down {
-  0% {
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-  }
-  100% {
-    transform: translateY(20%);
-    -webkit-transform: translateY(20%);
-    -moz-transform: translateY(20%);
-    -ms-transform: translateY(20%);
-    -o-transform: translateY(20%);
-  }
-}
-
 .story h2::after,
 .story__article::after,
 #studio h2::after {
@@ -152,35 +115,19 @@
   }
 }
 
-/* @mixin float($delay) {
-   animation-name: floating;
-   animation-duration: 3s;
-   animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-   animation-iteration-count: infinite;
-   animation-direction: alternate;
-   animation-delay: $delay;
- }
-
- @keyframes floating {
-   0% {
-     transform: translate(0, 0);
-   }
-   50% {
-     transform: translate(20px, 20px);
-   }
-   100% {
-     transform: translate(0, 0);
-   }
- } */
 @keyframes floating {
-  0% {
-    transform: translate(0, 0) rotate(0);
+  25% {
+    transform: translate(10px, 10px) rotate(10deg);
   }
   50% {
-    transform: translate(20px, 20px) rotate(10deg);
+    transform: translate(-10px, 10px) rotate(-5deg);
   }
-  100% {
-    transform: translate(0, 0) rotate(0);
+  75% {
+    transform: translate(10px, -5px) rotate(10deg);
+    -webkit-transform: translate(10px, -5px) rotate(10deg);
+    -moz-transform: translate(10px, -5px) rotate(10deg);
+    -ms-transform: translate(10px, -5px) rotate(10deg);
+    -o-transform: translate(10px, -5px) rotate(10deg);
   }
 }
 .animate-title {
@@ -188,15 +135,15 @@
   margin-right: 15px;
   opacity: 0;
   transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
   transition: opacity 0.2s ease-in, transform 0.5s ease-in;
   -webkit-transition: opacity 0.2s ease-in, transform 0.5s ease-in;
   -moz-transition: opacity 0.2s ease-in, transform 0.5s ease-in;
   -ms-transition: opacity 0.2s ease-in, transform 0.5s ease-in;
   -o-transition: opacity 0.2s ease-in, transform 0.5s ease-in;
-  -webkit-transform: translateY(100%);
-  -moz-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  -o-transform: translateY(100%);
 }
 .animate-title.visible {
   opacity: 1;
@@ -220,37 +167,6 @@
     font-size: 2rem;
   }
 }
-/* @mixin float($delay) {
-   animation-name: floating;
-   animation-duration: 3s;
-   animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-   animation-iteration-count: infinite;
-   animation-direction: alternate;
-   animation-delay: $delay;
- }
-
- @keyframes floating {
-   0% {
-     transform: translate(0, 0);
-   }
-   50% {
-     transform: translate(20px, 20px);
-   }
-   100% {
-     transform: translate(0, 0);
-   }
- } */
-@keyframes floating {
-  0% {
-    transform: translate(0, 0) rotate(0);
-  }
-  50% {
-    transform: translate(20px, 20px) rotate(10deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(0);
-  }
-}
 .banner {
   min-height: 806px;
   background-size: cover;
@@ -261,8 +177,8 @@
   top: 75px;
 }
 .banner#background-video {
-  width: 100vw;
-  min-height: 806px;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: fixed;
@@ -294,7 +210,7 @@
     align-items: center;
   }
 }
-@media all and (max-width: 900px) and (max-width: 700px) {
+@media all and (max-width: 700px) {
   #background-video {
     display: none !important;
   }
@@ -538,35 +454,19 @@
     content: "";
   }
 }
-/* @mixin float($delay) {
-   animation-name: floating;
-   animation-duration: 3s;
-   animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-   animation-iteration-count: infinite;
-   animation-direction: alternate;
-   animation-delay: $delay;
- }
-
- @keyframes floating {
-   0% {
-     transform: translate(0, 0);
-   }
-   50% {
-     transform: translate(20px, 20px);
-   }
-   100% {
-     transform: translate(0, 0);
-   }
- } */
 @keyframes floating {
-  0% {
-    transform: translate(0, 0) rotate(0);
+  25% {
+    transform: translate(10px, 10px) rotate(10deg);
   }
   50% {
-    transform: translate(20px, 20px) rotate(10deg);
+    transform: translate(-10px, 10px) rotate(-5deg);
   }
-  100% {
-    transform: translate(0, 0) rotate(0);
+  75% {
+    transform: translate(10px, -5px) rotate(10deg);
+    -webkit-transform: translate(10px, -5px) rotate(10deg);
+    -moz-transform: translate(10px, -5px) rotate(10deg);
+    -ms-transform: translate(10px, -5px) rotate(10deg);
+    -o-transform: translate(10px, -5px) rotate(10deg);
   }
 }
 .header_container {
@@ -620,13 +520,11 @@
 nav {
   position: fixed;
   background-color: #FFF5E9;
-  /* Fond jaune */
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 998;
-  /* Z-index inférieur à celui du .header_container */
   font-family: "Roboto Mono", monospace;
   padding-bottom: 2.5em;
 }
@@ -650,7 +548,7 @@ nav.open .menu-decorations {
 nav.open .menu-decorations::after {
   content: url("./assets/images/hibiscus_footer.png");
   position: absolute;
-  bottom: -35%;
+  bottom: -47%;
   right: -22%;
   animation: rotation 15s linear infinite;
   -webkit-animation: rotation 15s linear infinite;
@@ -703,13 +601,7 @@ nav.open .menu li:nth-child(2)::before {
   position: absolute;
   left: 21%;
   bottom: 8%;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-delay: 0s;
-  transform: rotate(-5deg);
+  animation: floating 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate 0s;
 }
 nav.open .menu li:nth-child(2)::after {
   content: url("./assets/images/Sunflower.png");
@@ -776,16 +668,10 @@ nav.open .menu li:nth-child(4)::after {
   content: url("./assets/images/nav/cat_2.png");
   position: absolute;
   right: 15%;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-delay: 0.5s;
-  transform: rotate(10deg);
+  animation: floating 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate 0.5s;
 }
 nav.open .menu li:last-child {
-  padding-top: 3em;
+  padding-top: 1em;
   font-size: 20px;
 }
 nav.open .menu li:last-child::before {
@@ -793,13 +679,7 @@ nav.open .menu li:last-child::before {
   position: absolute;
   bottom: 35%;
   left: 5%;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-delay: 0s;
-  transform: rotate(-5deg);
+  animation: floating 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate 1s;
 }
 nav.open .menu li a {
   color: #000;
@@ -920,7 +800,7 @@ nav.open .menu li a:hover {
     display: none;
   }
   nav.open .menu li:last-child {
-    margin-top: 0;
+    margin-top: 3em;
     font-size: 14px;
   }
   nav.open .menu li a {

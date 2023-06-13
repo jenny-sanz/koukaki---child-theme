@@ -19,73 +19,26 @@
     }
 }
 
-@mixin parallaxe-down {
-    animation: parallaxe-down 1s ease-in-out forwards;
-    -webkit-animation: parallaxe-down 1s ease-in-out forwards;
-
-    @keyframes parallaxe-down {
-        0% {
-            transform: translateY(0);
-            -webkit-transform: translateY(0);
-            -moz-transform: translateY(0);
-            -ms-transform: translateY(0);
-            -o-transform: translateY(0);
-}
-
-        100% {
-            transform: translateY(20%);
-            -webkit-transform: translateY(20%);
-            -moz-transform: translateY(20%);
-            -ms-transform: translateY(20%);
-            -o-transform: translateY(20%);
-}
-    }
-}
-
 
 //* FLOTTEMENT LOGO
 
-
-
- /* @mixin float($delay) {
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-delay: $delay;
+  @mixin float($delay) {
+    animation: floating 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate $delay;
   }
   
   @keyframes floating {
-    0% {
-      transform: translate(0, 0);
+    25% {
+      transform: translate(10px, 10px) rotate(10deg);
     }
     50% {
-      transform: translate(20px, 20px);
+      transform: translate(-10px, 10px) rotate(-5deg);
     }
-    100% {
-      transform: translate(0, 0);
-    }
-  } */
-  @mixin float($delay, $rotate: 0deg) {
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-delay: $delay;
-    transform: rotate($rotate);
-  }
-  
-  @keyframes floating {
-    0% {
-      transform: translate(0, 0) rotate(0);
-    }
-    50% {
-      transform: translate(20px, 20px) rotate(10deg);
-    }
-    100% {
-      transform: translate(0, 0) rotate(0);
-    }
+    75% {
+      transform: translate(10px, -5px) rotate(10deg);
+      -webkit-transform: translate(10px, -5px) rotate(10deg);
+      -moz-transform: translate(10px, -5px) rotate(10deg);
+      -ms-transform: translate(10px, -5px) rotate(10deg);
+      -o-transform: translate(10px, -5px) rotate(10deg);
+}
   }
   

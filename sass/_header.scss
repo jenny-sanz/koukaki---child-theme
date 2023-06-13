@@ -20,7 +20,6 @@ $max-width: 1440px;
         height: 75px;
         align-items: center;
 
-
         h1 {
             margin: 0 auto;
 
@@ -62,22 +61,18 @@ $max-width: 1440px;
             }
         }
     }
-
 }
 
 nav {
     position: fixed;
     background-color: $color__background-body;
-    /* Fond jaune */
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 998;
-    /* Z-index inférieur à celui du .header_container */
     font-family: $font__main;
     padding-bottom: 2.5em;
-
 
     &.open {
         display: flex !important;
@@ -99,7 +94,7 @@ nav {
             &::after {
                 content: url("./assets/images/hibiscus_footer.png");
                 position: absolute;
-                bottom: -35%;
+                bottom: -47%;
                 right: -22%;
                 @include rotation;
             }
@@ -112,7 +107,6 @@ nav {
             text-align: center;
             height: 100%;
             width: 100%;
-            
 
             li {
                 margin-top: 2em;
@@ -135,7 +129,7 @@ nav {
                         position: absolute;
                         left: 21%;
                         bottom: 8%;
-                        @include float(0s, -5deg);
+                        @include float(0s);
                     }
 
                     &::after {
@@ -163,7 +157,6 @@ nav {
 
                 }
 
-
                 &:nth-child(4) {
                     &::before {
                         content: url("./assets/images/nav/flower.png");
@@ -173,18 +166,16 @@ nav {
                         @include rotation;
                     }
 
-
                     &::after {
                         content: url("./assets/images/nav/cat_2.png");
                         position: absolute;
                         right: 15%;
-                        @include float(0.5s, 10deg);
+                        @include float(0.5s);
                     }
-
                 }
 
                 &:last-child {
-                    padding-top: 3em;
+                    padding-top: 1em;
                     font-size: 20px;
 
                     &::before {
@@ -192,10 +183,8 @@ nav {
                         position: absolute;
                         bottom: 35%;
                         left: 5%;
-                        @include float(0s, -5deg);
+                        @include float(1s);
                     }
-
-
                 }
 
                 a {
@@ -207,8 +196,6 @@ nav {
                         text-shadow: -1px -1px 8px rgba(255, 92, 0, 1);
                     }
                 }
-
-
             }
         }
     }
@@ -220,6 +207,7 @@ nav {
         &.open {
             .menu-decorations {
                 padding-top: 15em;
+
                 &::after {
                     right: -20%;
                     bottom: -25%;
@@ -390,7 +378,7 @@ nav {
                     }
 
                     &:last-child {
-                        margin-top: 0;
+                        margin-top: 3em;
                         font-size: 14px;
                     }
 

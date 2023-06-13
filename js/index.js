@@ -1,4 +1,4 @@
-console.log('test');
+
 //* NAVIGATION MENU BURGER
 
 const menuBurger = document.querySelector('.menu-burger');
@@ -7,14 +7,7 @@ const nav = document.querySelector('nav');
 menuBurger.addEventListener('click', () => {
     menuBurger.classList.toggle('open');
     nav.classList.toggle('open');
-    nav.classList.toggle('fade-in-up');
-
-    
-});
-
-nav.addEventListener('click', () => {
-    menuBurger.classList.remove('open');
-    nav.classList.remove('open');
+    nav.classList.toggle('fade-in-up'); 
 });
 
 //* ANIMATION FADE-IN SECTIONS ET TITRES 
@@ -69,18 +62,15 @@ for (let i = 0; i < sections.length; i++) {
 }
 
 //*  BANNER HERO
-// animation logo
-gsap.registerPlugin(ScrollTrigger);
+// animation parallaxe logo
+//gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".logo-container", {
     y: 450,
     ease: "none",
     scrollTrigger: {
       trigger: ".banner",
-      // start: "top bottom", // the default values
-      // end: "bottom top",
       scrub: true,
-      onEnter: () => console.log('Animation triggered'), 
     }, 
   });
   
@@ -96,13 +86,8 @@ function animateFloating() {
     });
   }  
 
-  // Appel de la fonction d'animation de flottement au chargement de la page
-  animateFloating();
-  
- 
 // parallaxe video
-document.addEventListener('DOMContentLoaded', function () {
-    //const banner = document.querySelector('.banner');
+function parallaxeVideo() {
     const video = document.querySelector('.banner video');
   
     new simpleParallax(video, {
@@ -111,8 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
       overflow: false,
       transition: 'linear'
     });
-  
-});
+}
+
  
 
 //*  SECTION LIEU - MODIFICATION DU DOM
@@ -142,7 +127,6 @@ let cloud2 = document.createElement('img');
 cloud2.src = 'wp-content/themes/foce-child/assets/images/little_cloud.png';
 cloud2.style.position = 'absolute';
 cloud2.style.top = '35%';
-//cloud2.style.left = '56%';
 cloud2.style.filter = 'blur(15px)';
 cloud2.classList.add('clouds');
 
@@ -156,10 +140,8 @@ lieu.appendChild(cloudsContainer);
 
 //* ANIMATION AU SCROLL DES NUAGES - GSAP ET SCROLLTRIGGER 
 
-gsap.registerPlugin(ScrollTrigger);
 
-// Fonction pour activer les positions de départ et d'arrivée dès le premier chargement de la page
-function activateScrollTrigger() {
+function cloudsScrollTrigger() {
     gsap.to('.clouds', {
         x: -300, // Déplacer les images de 300 pixels vers la gauche
         duration: 1,
@@ -167,20 +149,24 @@ function activateScrollTrigger() {
             trigger: '#clouds-container', // L'élément qui déclenche l'animation
             start: 'top center', // Point de départ de l'animation
             end: 'bottom center', // Point de fin de l'animation
-            scrub: true, // Définir à true pour lier le mouvement à la position de défilement
+            scrub: true, // Définir à true pour lier le mouvement au scroll
             //markers: true, // Ajouter un marqueur de débogage
-            onEnter: () => console.log('Animation triggered'), // Fonction à exécuter lorsque l'animation démarre
+          
         },
     });
 }
 
-//* APPELLE DE LA FONCTION ACTIVATESCROLLTRIGGER AU CHARGEMENT DE LA PAGE
+//* APPELLE DE LA FONCTION CLOUDSSCROLLTRIGGER, PARALLAXEVIDEO ET ANIMATEFLOATING AU CHARGEMENT DE LA PAGE
 
 window.addEventListener('load', () => {
-    activateScrollTrigger();
+
+    animateFloating();
+    parallaxeVideo();
+    cloudsScrollTrigger();
 
     // Rafraîchir ScrollTrigger après un court délai pour garantir l'activation des positions de départ et d'arrivée dès le premier chargement
     setTimeout(() => {
         ScrollTrigger.refresh();
     }, 100);
+  
 });

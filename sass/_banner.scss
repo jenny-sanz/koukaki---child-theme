@@ -1,81 +1,70 @@
-@import 'utils/mixins/mixins';
-
 .banner {
-    //background-image: url("./assets/images/banner.png");
-    min-height: 806px;
- 
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 75px;
-  
-    &#background-video {
-      width: 100vw;
-      min-height: 806px;
-      object-fit: cover;
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: -1;
+  //background-image: url("./assets/images/banner.png");
+  min-height: 806px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 75px;
+
+  &#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .logo-container {
+    position: absolute;
+    z-index: 2;
+    margin-top: -30%;
+    display: grid;
+    place-items: center;
+
+    #logo {
+      width: 80%;
     }
-  
+  }
+}
+
+//* responsive
+@media all and (max-width: 900px) {
+  .banner {
+    min-height: 800px;
+
     .logo-container {
-      position: absolute;
-      z-index: 2;
-      margin-top: -30%;
-      display: grid;
-      place-items: center;
-      
-  
+      margin-top: -50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+
+  #background-video {
+    display: none !important;
+  }
+
+  .banner {
+    min-height: 600px;
+
+    .logo-container {
+      margin-top: -80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       #logo {
-        width: 80%;
-       
-       
+        margin-top: -50%;
       }
     }
   }
-  
-
-                //* responsive
-@media all and (max-width: 900px){
-    .banner {
-        min-height: 800px;
-         .logo-container {
-             margin-top: -50%;
-             display: flex;
-             justify-content:center;
-             align-items:center;
-             
-            
- }
-
-
-
 }
-@media all and (max-width: 700px) {
-
-    #background-video {
-        display: none !important;
-    }
-
-     .banner {
-        min-height: 600px;
-         .logo-container {
-             margin-top: -80%;
-             display: flex;
-             justify-content:center;
-             align-items:center;
-             
-             #logo{
-              margin-top: -50%;
-               
-              
-             }
- }
-}
-    
-}}
