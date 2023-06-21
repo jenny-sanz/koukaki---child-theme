@@ -3,11 +3,20 @@
 
 const menuBurger = document.querySelector('.menu-burger');
 const nav = document.querySelector('nav');
+const liens = document.querySelectorAll('.menu li a')
 
 menuBurger.addEventListener('click', () => {
     menuBurger.classList.toggle('open');
     nav.classList.toggle('open');
-    nav.classList.toggle('fade-in-up'); 
+    nav.classList.toggle('fade-in-up');
+});
+
+// Ajouter un gestionnaire d'événement à chaque lien du menu pour fermer le menu full screen
+liens.forEach(item => {
+    item.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuBurger.classList.remove('open')
+    });
 });
 
 //* ANIMATION FADE-IN SECTIONS ET TITRES 
@@ -16,7 +25,7 @@ const sectionObserver = new IntersectionObserver(function (entries, observer) {
     entries.forEach(function (entry) {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in-up');
-            observer.unobserve(entry.target);
+
 
             // Récupération des titres h2/h3 et de chaque mot des titres
             console.log(entry.target);
@@ -39,13 +48,14 @@ const sectionObserver = new IntersectionObserver(function (entries, observer) {
 
                 // Itération sur chaque span et définition d'un délai par rapport à l'index pour déclencher l'animation
                 spans.forEach((span, index) => {
-                    const delay = (index === 0) ? 400 : index * 500; // Délai de 500 millisecondes pour chaque span à partir du deuxième span
+                    const delay = (index === 0) ? 400 : index * 600; // Délai de 500 millisecondes pour chaque span à partir du deuxième span
 
                     setTimeout(function () {
                         span.classList.add('visible');
                     }, delay);
                 });
             }
+            observer.unobserve(entry.target);
         }
     });
 }, {
@@ -69,36 +79,36 @@ gsap.to(".logo-container", {
     y: 450,
     ease: "none",
     scrollTrigger: {
-      trigger: ".banner",
-      scrub: true,
-    }, 
-  });
-  
+        trigger: ".banner",
+        scrub: true,
+    },
+});
+
 // Animation de flottement du logo 
 function animateFloating() {
     gsap.to('#logo', {
-      y: '+=20',
-      x: '+=20',
-      duration: 1.5,
-      ease: 'sine.inOut',
-      yoyo: true,
-      repeat: -1
+        y: '+=20',
+        x: '+=20',
+        duration: 1.5,
+        ease: 'sine.inOut',
+        yoyo: true,
+        repeat: -1
     });
-  }  
+}
 
 // parallaxe video
 function parallaxeVideo() {
     const video = document.querySelector('.banner video');
-  
+
     new simpleParallax(video, {
-      orientation: 'up',
-      scale: 1.12,
-      overflow: false,
-      transition: 'linear'
+        orientation: 'up',
+        scale: 1.12,
+        overflow: false,
+        transition: 'linear'
     });
 }
 
- 
+
 
 //*  SECTION LIEU - MODIFICATION DU DOM
 
@@ -151,7 +161,7 @@ function cloudsScrollTrigger() {
             end: 'bottom center', // Point de fin de l'animation
             scrub: true, // Définir à true pour lier le mouvement au scroll
             //markers: true, // Ajouter un marqueur de débogage
-          
+
         },
     });
 }
@@ -167,6 +177,16 @@ window.addEventListener('load', () => {
     // Rafraîchir ScrollTrigger après un court délai pour garantir l'activation des positions de départ et d'arrivée dès le premier chargement
     setTimeout(() => {
         ScrollTrigger.refresh();
+
     }, 100);
-  
+
 });
+
+
+
+
+
+
+
+
+

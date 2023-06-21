@@ -191,7 +191,7 @@
 .banner .logo-container {
   position: absolute;
   z-index: 2;
-  margin-top: -30%;
+  margin-top: -35%;
   display: grid;
   place-items: center;
 }
